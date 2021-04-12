@@ -3,26 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="css/layout.css"></script>
-    <script src="css/style.css"></script>
-
+    <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="javascript/ajax.js"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recipes that have been submitted by users">
+    <meta name="author" content="Ian Tibe">
+    <meta name="keywords" content="recipes, user submitted, school project">
 </head>
 <body>
     <header>
         <div id="topheader">
             <div id="leftheader">
-
+                <ul>
+                    <li>Home</li>
+                    <li class="menuitemmargin">Add Recipie</li>
+                    <li class="menuitemmargin">Show Recipies</li>
+                </ul>
             </div>
             <div id="rightheader">
-
+                <img src="images/lemon.jpg" alt="Picture of lemon"/>
             </div>
         </div>
         <div id="infoline">
-
+            <span>Welcome, <span id="username"></span></span>
         </div>
     </header>
-    <div id="introcontent">
-
+    <div id="content">
+        <div id="title"><h2>My fancy new web site</h2></div>
+        <div id="intro">
+            <video autoplay muted loop>
+                <source src="video/video.mp4" type="video/mp4">
+            </video>
+            <div id="introtext">
+                intro text
+            </div>
+        </div>
     </div>
 </body>
 </html>
