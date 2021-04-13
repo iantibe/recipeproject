@@ -30,15 +30,47 @@
         </div>
     </header>
     <div id="content">
-        <div id="title"><h2>My fancy new web site</h2></div>
-        <div id="intro">
-            <video autoplay muted loop>
-                <source src="video/video.mp4" type="video/mp4">
-            </video>
-            <div id="introtext">
-                intro text
+        <div id="dataentry">
+            <div id="instructions">
+                Enter an Ingredent below.
+            </div>
+            <form>
+                <label for="ingredent">Ingredent</label>
+                <input name="ingredent" id="ingredent" required type="text">
+                <label for="amount">Amount</label>
+                <input name="amount" id="amount" required type="text">
+                <label for="units">Select Unit</label>
+                <select name="units" id="units">
+                    <option value="">Select A Unit</option>
+                    <option value="cups">Cups</option>
+                    <option value="tbs">Tablespoon</option>
+                    <option value="tsp">Teaspoon</option>
+                </select>
+                <button id="addingredent">Add Ingredient</button>
+            </form>
+
+            <div id="ingredent_list">
+
+            </div>
+
+            <div id="directions">
+                <textarea required spellcheck="true"></textarea>
+
             </div>
         </div>
     </div>
 </body>
 </html>
+
+<!--main page content-->
+<!--
+<div id="title"><h2>My fancy new web site</h2></div>
+<div id="intro">
+    <video autoplay muted loop>
+        <source src="video/video.mp4" type="video/mp4">
+    </video>
+    <div id="introtext">
+        intro text
+    </div>
+</div>
+-->
