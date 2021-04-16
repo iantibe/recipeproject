@@ -5,6 +5,8 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="css/layout.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquery/recipe_slider.js"></script>
     <script src="javascript/ajax.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Recipes that have been submitted by users">
@@ -30,32 +32,38 @@
         </div>
     </header>
     <div id="content">
-        <div id="dataentry">
-            <div id="instructions">
-                Enter an Ingredent below.
+        <div id="display_ingredient">
+            <div id="left_display_panel">
+                <h2><span>Select a Recipe</span></h2>
+                <div class="recipe_select"></div>
+                <div class="recipe_select"></div>
             </div>
-            <form>
-                <label for="ingredent">Ingredent</label>
-                <input name="ingredent" id="ingredent" required type="text">
-                <label for="amount">Amount</label>
-                <input name="amount" id="amount" required type="text">
-                <label for="units">Select Unit</label>
-                <select name="units" id="units">
-                    <option value="">Select A Unit</option>
-                    <option value="cups">Cups</option>
-                    <option value="tbs">Tablespoon</option>
-                    <option value="tsp">Teaspoon</option>
-                </select>
-                <button id="addingredent">Add Ingredient</button>
-            </form>
+            <div id="right_display_panel">
+                <h2><span id="recipe_name">Title of recipie</span></h2>
 
-            <div id="ingredent_list">
+                <div>
+                    <div id="display_header_1" class="displayheader">
+                    
+                    </div>
+                    <div id="display_info1" class="displayinfo">
 
-            </div>
+                    </div>
+                </div>
+                <div>
+                    <div id="display_header_2" class="displayheader">
+                    </div>
+                    <div id="display_info2" class="displayinfo">
 
-            <div id="directions">
-                <textarea required spellcheck="true"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <div id="display_header_3" class="displayheader">
 
+                    </div>
+                    <div id="display_info3" class="displayinfo">
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -73,4 +81,38 @@
         intro text
     </div>
 </div>
+-->
+
+<!--Add ingredent content
+
+ <div id="dataentry">
+            <div id="instructions">
+                Enter an Ingredent below.
+            </div>
+            <h2>Add ingredient</h2>
+            <form>
+                <label for="ingredent">Ingredent</label>
+                <input name="ingredent" id="ingredent" required type="text">
+                <label for="amount">Amount</label>
+                <input name="amount" id="amount" required type="text">
+                <label for="units">Select Unit</label>
+                <select name="units" id="units">
+                    <option value="">Select A Unit</option>
+                    <option value="cups">Cups</option>
+                    <option value="tbs">Tablespoon</option>
+                    <option value="tsp">Teaspoon</option>
+                </select>
+                <button id="addingredent">Add Ingredient</button>
+            <h2>Current ingredient list</h2>
+            </form>
+
+            <div id="ingredent_list">
+            </div>
+            <h2>Cooking directions</h2>
+            <div id="directions">
+                <textarea required spellcheck="true"></textarea>
+
+            </div>
+        </div>
+
 -->

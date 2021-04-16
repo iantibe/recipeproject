@@ -140,7 +140,7 @@ video {
 /*ingredient list css*/
 
 #dataentry {
-    width: 750px;
+    width: 875px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -186,4 +186,48 @@ form input {
 
 form select {
     margin-right: 10px;
+}
+
+/*Display ingredient*/
+
+.recipe_select {
+    width: 400px;
+    height: 75px;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: thin;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#display_ingredient {
+    display: flex;
+
+}
+
+#left_display_panel {
+    width: 50%;
+}
+
+#right_display_panel {
+    width: 50%;
+}
+
+.displayheader {
+    padding: 5px;
+    text-align: center;
+    border-style: solid;
+    border-width: thin;
+    margin-top: 20px;
+    height: 40px;
+}
+
+.displayinfo {
+    padding: 50px;
+    display: none;
+    text-align: center;
+    border-style: solid;
+    border-width: thin;
+    height: 400px;
 }
