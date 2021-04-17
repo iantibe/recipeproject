@@ -214,6 +214,11 @@ form select {
     width: 50%;
 }
 
+.displayheader_title {
+    width: 85%;
+}
+
+
 .displayheader {
     padding: 5px;
     text-align: center;
@@ -221,6 +226,8 @@ form select {
     border-width: thin;
     margin-top: 20px;
     height: 40px;
+    display: flex;
+
 }
 
 .displayinfo {
@@ -230,4 +237,16 @@ form select {
     border-style: solid;
     border-width: thin;
     height: 400px;
+}
+
+#display_header_1 {
+    width: 15%;
+}
+
+#display_header_2 {
+    width: 15%;
+}
+
+#display_header_3 {
+    width: 15%;
 }

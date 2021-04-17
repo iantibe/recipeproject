@@ -1,0 +1,29 @@
+<div id="dataentry">
+    <div id="instructions">
+        Enter an Ingredent below.
+    </div>
+    <h2>Add ingredient</h2>
+    <form>
+        <label for="ingredent">Ingredent</label>
+        <input name="ingredent" id="ingredent" required type="text">
+        <label for="amount">Amount</label>
+        <input name="amount" id="amount" required type="text">
+        <label for="units">Select Unit</label>
+        <select name="units" id="units">
+            <option value="">Select A Unit</option>
+            <option value="cups">Cups</option>
+            <option value="tbs">Tablespoon</option>
+            <option value="tsp">Teaspoon</option>
+        </select>
+        <button id="addingredent">Add Ingredient</button>
+        <h2>Current ingredient list</h2>
+    </form>
+
+    <div id="ingredent_list">
+    </div>
+    <h2>Cooking directions</h2>
+    <div id="directions">
+        <textarea required spellcheck="true"></textarea>
+
+    </div>
+</div>

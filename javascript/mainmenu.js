@@ -1,4 +1,4 @@
-function get_data(data) {
+function get_menu_option(data) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
