@@ -15,6 +15,21 @@ function add_item(){
     var text = document.createTextNode(ing.ingredient + "---------------------" + ing.amount + " " + ing.units);
     p_element.appendChild(text)
     document.querySelector("#ingredent_list").appendChild(p_element)
+}
 
+function clear_form(){
+    document.querySelector("#ingredent_list").innerHTML = ""
+    ingredient_list = []
+    document.querySelector('#ingredient').value = ""
+    document.querySelector('#amount').value = ""
+    document.querySelector('#input_directions').value = ""
+    //TODO: add command to reset drop down
+    }
 
+function submit_recipe(){
+    
+}
+
+function post_recipe_to_server(){
+    //add ajax call to api to save recipe
 }

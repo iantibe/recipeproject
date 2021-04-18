@@ -2,6 +2,34 @@
     <div id="instructions">
         Enter an Ingredent below.
     </div>
+    <h2>Recipe info</h2>
+    <div id="recipe_info">
+        <div>
+            <label for="recipe_name">Recipe Name: </label>
+            <input required type="text" id="recipe_name"/>
+        </div>
+        <div>
+            <label for="servings">Number of Servings:</label>
+            <input required type="text" id="servings"/>
+        </div>
+        <div>
+            <label for="prep_time">Prep time: </label>
+            <input required type="text" id="prep_time">
+        </div>
+        <div>
+            <label for="cook_time">Cooking Time</label>
+            <input required type="text" id="cook_time">
+        </div>
+        <div>
+            <label for="difficulty">Select a Difficulty Level: </label>
+            <select id="difficulty">
+                <option value="">Select a difficulty level</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="difficult">Difficult</option>
+            </select>
+        </div>
+    </div>
     <h2>Add ingredient</h2>
     <form>
         <label for="ingredient">Ingredient</label>
@@ -20,11 +48,15 @@
     </form>
 
     <div id="ingredent_list">
-        <p id="single_ingredient">test ing -------- 55 tsp</p>
     </div>
     <h2>Cooking directions</h2>
     <div id="directions">
-        <textarea required spellcheck="true"></textarea>
+        <textarea id="input_directions" required spellcheck="true"></textarea>
 
     </div>
+
+    <form id="submit_data_button_box">
+        <input type="button" value="Submit" onclick="submit_recipe()"/>
+        <input type="button" value="clear" onclick="clear_form()"/>
+    </form>
 </div>

@@ -4,5 +4,5 @@ class Ingredient {
         this.ingredient = ingredient;
         this.amount = amount;
         this.units = units;
-    }
+      }
 }
