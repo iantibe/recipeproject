@@ -8,5 +8,6 @@ class Recipe{
         this.directions = directions;
         this.ingredient_list = ingredient_list;
         this.recipe_id = -1;
+        this.image_file = null
     }
 }

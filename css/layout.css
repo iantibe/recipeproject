@@ -283,10 +283,20 @@ form select {
 
 #display_header_2 {
     width: 15%;
+    background-image: url("../images/arrows_collapse_icon_160440.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
+
+
 
 #display_header_3 {
     width: 15%;
+    background-image: url("../images/arrows_collapse_icon_160440.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 
 #recipe_title_block {
@@ -307,6 +317,11 @@ form select {
 
 #right_title {
     width: 50%;
+}
+
+#right_title img {
+    height: 100%;
+    width: 100%;
 }
 
 #button_box {

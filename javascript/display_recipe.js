@@ -27,6 +27,7 @@ function load_recipe_detail(recipe_id){
     document.querySelector('#prep_time').innerHTML = recipe_obj.preptime;
     document.querySelector('#cooking_time').innerHTML = recipe_obj.cookingtime;
     document.querySelector('#difficulty').innerHTML = recipe_obj.difficulty;
+    document.querySelector('#right_title img').setAttribute("src","images/" + recipe_obj.image_file)
 
     let p_obj = document.createElement('p')
     let obj_text = document.createTextNode(recipe_obj.directions);
@@ -90,6 +91,7 @@ function get_data_from_server(){
     ing_list.push(ingredint)
     let recipe_obj = new Recipe("name","servings","preptime","cooktime","difficulty","directions", ing_list)
     recipe_obj.recipe_id = 100
+    recipe_obj.image_file = "salmon.jpg"
     return [recipe_obj]
 
 }
