@@ -77,7 +77,7 @@ function create_recipe_button(text_to_display, classname, addlocation, recipe_id
 
 function  generate_recipe_buttons(){
     //run this function to generate a view
-    server_data = get_data_from_server()
+
     for(let z =0; z < server_data.length; z++){
         create_recipe_button(server_data[z].name,"recipe_select","left_display_panel", server_data[z].recipe_id)
     }
@@ -86,17 +86,35 @@ function  generate_recipe_buttons(){
 function get_data_from_server(){
     //gets data from server and places in object
     //todo:remove test code
-    let ingredint = new Ingredient("testingredinet","test amount","units")
-    let ing_list = []
-    ing_list.push(ingredint)
-    let recipe_obj = new Recipe("name","servings","preptime","cooktime","difficulty","directions", ing_list)
-    recipe_obj.recipe_id = 100
-    recipe_obj.image_file = "salmon.jpg"
-    return [recipe_obj]
+    //let ingredint = new Ingredient("testingredinet","test amount","units")
+    //let ing_list = []
+    //ing_list.push(ingredint)
+    //let recipe_obj = new Recipe("name","servings","preptime","cooktime","difficulty","directions", ing_list)
+    //recipe_obj.recipe_id = 100
+    //recipe_obj.image_file = "salmon.jpg"
+    //return [recipe_obj]
+
+    fetch("http://127.0.0.1:5000/recipes")
+        .then(x => x.json())
+        .then(y =>  server_data = y);
 
 }
+
 
 function get_data_from_cookie(){
-    //gets data from cookie and places in object
+    //get data from cookie
 }
+
+//const apiData = () => {
+//    fetch('http://127.0.0.1:5000/recipes',)
+//        .then((res) => {
+//            return  res.json()
+//        }).then((data) => {
+//        fetchedData(data)
+//    })
+//}
+
+//fetchedData = (apiData) => {
+//    console.log(apiData)
+//}
 
