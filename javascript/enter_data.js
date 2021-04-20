@@ -46,8 +46,9 @@ function submit_recipe(){
 
     recipe_object = new Recipe(recipe_name,servings,prep_time,cook_time,difficulty,directions,ingredient_list)
 
-    console.log(recipe_object)
-    console.log(JSON.stringify(recipe_object))
+
+    //console.log(JSON.stringify(recipe_object))
+
 
     document.querySelector('#recipe_name').value = ""
     document.querySelector('#servings').value = ""
@@ -60,8 +61,19 @@ function submit_recipe(){
     document.querySelector('#input_directions').value = ""
     ingredient_list = []
     //todo: Add dropdown reset
+
+    post_recipe_to_server(recipe_object)
 }
 
-function post_recipe_to_server(){
-    //add ajax call to api to save recipe
+async function post_recipe_to_server(post_data) {
+    let response = await fetch('http://127.0.0.1:5000/addrecipe', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(post_data)
+    });
+
+    //let result = await response.json();
+    //return result.message
 }
