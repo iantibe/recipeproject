@@ -36,38 +36,48 @@ function clear_form(){
     }
 
 function submit_recipe(){
-    recipe_name = document.querySelector('#recipe_name').value
-    servings = document.querySelector('#servings').value
-    prep_time = document.querySelector('#prep_time').value
-    cook_time = document.querySelector('#cook_time').value
-    difficulty_object = document.querySelector('#difficulty')
-    difficulty = difficulty_object.options[difficulty_object.selectedIndex].value
-    directions = document.querySelector('#input_directions').value
+    response_verify = verify_data()
 
-    recipe_object = new Recipe(recipe_name,servings,prep_time,cook_time,difficulty,directions,ingredient_list)
+    if(response_verify === "-1") {
+        //get values
+        recipe_name = document.querySelector('#recipe_name').value
+        servings = document.querySelector('#servings').value
+        prep_time = document.querySelector('#prep_time').value
+        cook_time = document.querySelector('#cook_time').value
+        difficulty_object = document.querySelector('#difficulty')
+        difficulty = difficulty_object.options[difficulty_object.selectedIndex].value
+        directions = document.querySelector('#input_directions').value
 
+        //create object
+        recipe_object = new Recipe(recipe_name,servings,prep_time,cook_time,difficulty,directions,ingredient_list)
 
-    //console.log(JSON.stringify(recipe_object))
-
-
-    document.querySelector('#recipe_name').value = ""
-    document.querySelector('#servings').value = ""
-    document.querySelector('#prep_time').value = ""
-    document.querySelector('#cook_time').value =""
-    document.querySelector('#input_directions').value = ""
-    document.querySelector("#ingredent_list").innerHTML = ""
-    document.querySelector('#ingredient').value = ""
-    document.querySelector('#amount').value = ""
-    document.querySelector('#input_directions').value = ""
-    ingredient_list = []
-    //todo: Add dropdown reset
-
-    post_recipe_to_server(recipe_object)
-    console.log(recipe_object)
+        //clear boxes
+        document.querySelector('#error_box').style.display = "none"
+        document.querySelector('#recipe_name').value = ""
+        document.querySelector('#servings').value = ""
+        document.querySelector('#prep_time').value = ""
+        document.querySelector('#cook_time').value =""
+        document.querySelector('#input_directions').value = ""
+        document.querySelector("#ingredent_list").innerHTML = ""
+        document.querySelector('#ingredient').value = ""
+        document.querySelector('#amount').value = ""
+        document.querySelector('#input_directions').value = ""
+        ingredient_list = []
+        console.log(recipe_object)
+        post_recipe_to_server(recipe_object)
+    }else {
+        document.querySelector('#error_message').innerHTML = response_verify
+        document.querySelector('#error_box').style.display = "flex"
+    }
 }
 
 async function post_recipe_to_server(post_data) {
-    let response = await fetch('http://192.168.0.2:8000/addrecipe', {
+    console.log("server address")
+    console.log(server_address)
+    send_address = server_address + "/addrecipe"
+    console.log("send address")
+    console.log(send_address)
+    let response = await fetch(send_address, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
@@ -77,4 +87,29 @@ async function post_recipe_to_server(post_data) {
 
     //let result = await response.json();
     //return result.message
+}
+
+
+function verify_data(){
+
+    status =  "-1"
+
+    if (document.querySelector('#recipe_name').value === ""){
+        status = "Please add A recipe name"
+    }else if(document.querySelector('#servings').value === ""){
+        status = "Please add a serving"
+    }else if(document.querySelector('#prep_time').value === ""){
+        status = "Please add a prep time"
+    }else if(document.querySelector('#cook_time').value === ""){
+        status = "Please add a cook time"
+    }else if(document.querySelector('#difficulty').selectedIndex === 0){
+        status  = "Please select a Difficulty"
+    }else  if(ingredient_list.length === 0) {
+        status = "Please add ingredients"
+    }else if(document.querySelector('#input_directions').value === ""){
+        status = "Please Add Directions"
+    }
+
+    return status
+
 }

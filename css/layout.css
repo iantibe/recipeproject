@@ -359,3 +359,31 @@ form {
 .ingredient_unit {
     display: flex;
 }
+
+#error_box {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 500px;
+    height: 75px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: thin;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#server_control {
+    width: 400px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: thin;
+}

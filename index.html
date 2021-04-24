@@ -11,12 +11,13 @@
     <script src="javascript/display_recipe.js"></script>
     <script src="javascript/enter_data.js"></script>
     <script src="javascript/index.js"></script>
+    <script src="javascript/constants.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Recipes that have been submitted by users">
     <meta name="author" content="Ian Tibe">
     <meta name="keywords" content="recipes, user submitted, school project">
 </head>
-<body onload="setup_name_user_id()">
+<body onload="setup_name_user_id(); display_server()">
     <header>
         <div id="topheader">
             <div id="leftheader">
@@ -45,6 +46,10 @@
             </div>
         </div>
     </div>
+<div id="server_control">
+    <div><p>Current Server:<span id="server_value"></span></p></div>
+    <input type="button" value="New Server" onclick="change_server()"/>
+</div>
 </body>
 </html>
 

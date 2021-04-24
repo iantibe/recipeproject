@@ -95,8 +95,14 @@ function get_data_from_server(){
     //recipe_obj.recipe_id = 100
     //recipe_obj.image_file = "salmon.jpg"
     //return [recipe_obj]
+    console.log("server_Data")
+    console.log(server_address)
+    console.log("formatted data")
+    get_server_data = server_address + "/recipes"
 
-    fetch("http://192.168.0.2:8000/recipes")
+    console.log(get_server_data)
+
+    fetch(get_server_data)
         .then(x => x.json())
         .then(y =>  server_data = y);
 

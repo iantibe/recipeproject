@@ -45,3 +45,15 @@ function setup_name_user_id(){
 
     }
 }
+
+function change_server(){
+    new_server = prompt("Enter new Server Name or IP Number")
+    server_address = new_server
+    display_server()
+
+}
+
+function display_server(){
+    document.querySelector('#server_value').innerHTML = server_address;
+
+}
