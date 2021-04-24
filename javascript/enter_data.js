@@ -12,7 +12,7 @@ function add_item(){
 
     let p_element = document.createElement("p");
     p_element.setAttribute("id", "single_ingredient")
-    var text = document.createTextNode(ing.ingredient + "---------------------" + ing.amount + " " + ing.units);
+    var text = document.createTextNode(ing.ingredient + ".................." + ing.amount + " " + ing.units);
     p_element.appendChild(text)
     document.querySelector("#ingredent_list").appendChild(p_element)
 
@@ -63,10 +63,11 @@ function submit_recipe(){
     //todo: Add dropdown reset
 
     post_recipe_to_server(recipe_object)
+    console.log(recipe_object)
 }
 
 async function post_recipe_to_server(post_data) {
-    let response = await fetch('http://127.0.0.1:5000/addrecipe', {
+    let response = await fetch('http://192.168.0.2:8000/addrecipe', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'

@@ -30,3 +30,7 @@
 #infoline {
     font-family: "JetBrains Mono";
 }
+
+.recipe_select p {
+    font-size: x-large;
+}

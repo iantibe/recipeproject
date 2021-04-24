@@ -29,6 +29,8 @@ function load_recipe_detail(recipe_id){
     document.querySelector('#difficulty').innerHTML = recipe_obj.difficulty;
     document.querySelector('#right_title img').setAttribute("src","images/" + recipe_obj.image_file)
 
+
+
     let p_obj = document.createElement('p')
     let obj_text = document.createTextNode(recipe_obj.directions);
     p_obj.appendChild(obj_text)
@@ -71,7 +73,7 @@ function create_recipe_button(text_to_display, classname, addlocation, recipe_id
     let text = document.createTextNode(text_to_display);
     x.className = classname
     x.appendChild(text)
-    x.addEventListener('click', function (){load_recipe_detail(recipe_id)})
+    x.addEventListener('click', function (){clear_boxes(); load_recipe_detail(recipe_id)})
     document.querySelector("#" + addlocation).appendChild(x)
 }
 
@@ -94,7 +96,7 @@ function get_data_from_server(){
     //recipe_obj.image_file = "salmon.jpg"
     //return [recipe_obj]
 
-    fetch("http://127.0.0.1:5000/recipes")
+    fetch("http://192.168.0.2:8000/recipes")
         .then(x => x.json())
         .then(y =>  server_data = y);
 
@@ -118,3 +120,8 @@ function get_data_from_cookie(){
 //    console.log(apiData)
 //}
 
+function clear_boxes(){
+    //added to clear ingredient and direction boxes with new item load
+    document.querySelector('#display_info2').innerHTML = ""
+    document.querySelector('#display_info3').innerHTML = ""
+}

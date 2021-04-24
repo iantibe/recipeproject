@@ -173,11 +173,14 @@ textarea {
     width: 500px;
     margin-bottom: 60px;
     height: 100px;
-    text-align: center;
+    text-align: left;
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
     border-width: thin;
+    padding: 10px;
+    font-size: large;
+
 }
 
 form input {
@@ -186,6 +189,15 @@ form input {
 
 form select {
     margin-right: 10px;
+}
+
+form {
+    border-style: solid;
+    border-width: thin;
+    width: 875px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
 }
 
 #single_ingredient {
@@ -221,6 +233,8 @@ form select {
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
+    padding-left: 0;
+    padding-right: 0;
 }
 /*Display ingredient*/
 
@@ -329,6 +343,10 @@ form select {
     justify-content: space-around;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
+}
+#button_box input {
+    height: 25px;
 }
 
 .ingredient_list_item{
