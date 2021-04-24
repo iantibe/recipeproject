@@ -50,6 +50,7 @@ function submit_recipe(){
 
         //create object
         recipe_object = new Recipe(recipe_name,servings,prep_time,cook_time,difficulty,directions,ingredient_list)
+        recipe_object.image_file = document.querySelector('#file_input').value
 
         //clear boxes
         document.querySelector('#error_box').style.display = "none"
