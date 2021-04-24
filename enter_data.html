@@ -1,10 +1,10 @@
 <div id="dataentry">
-    <div id="instructions">
-        Enter Recipe information and add ingredients to the recipe Ingredients will appear in current ingredient list.
-        Add cooking directions. Press submit when finished
+    <div id="instructions" class="light_main">
+        <h2>Enter Recipe information and add ingredients to the recipe Ingredients will appear in current ingredient list.
+            Add cooking directions. Press submit when finished</h2>
     </div>
     <h2>Recipe info</h2>
-    <div id="recipe_info">
+    <div id="recipe_info" class="light_main">
         <div>
             <label for="recipe_name">Recipe Name: </label>
             <input required type="text" id="recipe_name"/>
@@ -36,7 +36,7 @@
         </div>
     </div>
     <h2>Add ingredient</h2>
-    <form>
+    <form class="light_main">
         <label for="ingredient">Ingredient</label>
         <input name="ingredient" id="ingredient" required type="text">
         <label for="amount">Amount</label>
@@ -51,14 +51,14 @@
         <input type="button" id="add_ingredient" value="Add Ingredient" onclick="add_item()">
     </form>
     <h2>Current ingredient list</h2>
-    <div id="ingredent_list">
+    <div id="ingredent_list" class="light_main">
     </div>
     <h2>Cooking directions</h2>
     <div id="directions">
-        <textarea id="input_directions" required spellcheck="true"></textarea>
+        <textarea id="input_directions" required spellcheck="true" class="light_main"></textarea>
 
     </div>
-    <form id="submit_data_button_box">
+    <form id="submit_data_button_box" class="light_main">
         <input type="button" value="Submit" onclick="submit_recipe()"/>
         <input type="button" value="clear" onclick="clear_form()"/>
     </form>

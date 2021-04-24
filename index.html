@@ -20,7 +20,7 @@
 <body onload="setup_name_user_id(); display_server()">
     <header>
         <div id="topheader">
-            <div id="leftheader">
+            <div id="leftheader" class="main_color">
                 <ul>
                     <li onclick="get_menu_option('intro_content.html')">Home</li>
                     <li class="menuitemmargin"onclick="get_menu_option('enter_data.html')">Add Recipe</li>
@@ -38,18 +38,22 @@
     <div id="content">
         <div id="title"><h2>My fancy new web site</h2></div>
         <div id="intro">
-            <video autoplay muted loop>
-                <source src="video/video.mp4" type="video/mp4">
-            </video>
-            <div id="introtext">
-                intro text
+            <div class="main_color" id="intro_main_panel">
+                <video autoplay muted loop>
+                    <source src="video/video.mp4" type="video/mp4">
+                </video>
+                <div id="introtext">
+                    <p>Welcome To our Site! Please feel free to browse our collection of recipes. You can ever submit your favorite to share</p>
+                </div>
+            </div>
+            <div id="server_control">
+                <div><p>Current Server:<span id="server_value"></span></p></div>
+                <input type="button" value="New Server" onclick="change_server()"/>
             </div>
         </div>
+
+
     </div>
-<div id="server_control">
-    <div><p>Current Server:<span id="server_value"></span></p></div>
-    <input type="button" value="New Server" onclick="change_server()"/>
-</div>
 </body>
 </html>
 

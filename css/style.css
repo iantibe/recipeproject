@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap');
+
 @font-face {
     font-family: title_font;
     src: url('../fonts/BioRhymeExpanded-ExtraBold.otf');
@@ -15,11 +18,11 @@
 }
 
 #intro {
-    background-color: cadetblue;
+
 }
 
 #intro2 {
-    background-color: cadetblue;
+
 }
 
 #title {
@@ -33,5 +36,45 @@
 
 .recipe_select p {
     font-size: x-large;
+}
+
+.main_color{
+    background-color: #3D4E17;
+}
+
+.second_color {
+    background-color: #C7A003;
+}
+
+.third_color {
+    background-color: #151F13;
+}
+
+.background_final {
+    background-color: #EDE595;
+}
+
+.light_main {
+    background-color: #5C7623;
+
+}
+
+#introtext {
+    font-size: xxx-large;
+    /*Red Hat text font*/
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+#introtext p {
+    text-align: left;
+    padding: 10px;
+}
+
+.main_font{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 h2 h3 {
+    font-family: 'Open Sans', sans-serif;
 }
 

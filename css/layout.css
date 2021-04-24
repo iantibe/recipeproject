@@ -98,7 +98,7 @@ header {
 
 /*intro css without animation*/
 
-#intro2 {
+#intro_no_animation {
     width: 50%;
     height: 900px;
     margin-left: auto;
@@ -118,6 +118,14 @@ header {
 video {
     width: 95%;
     height: 450px;
+
+}
+
+#intro_main_panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Animation css*/
@@ -134,7 +142,7 @@ video {
 
 @keyframes bodycolor {
     from {background-color: black;}
-    to {background-color: white;}
+    to {background-color: #EDE595;}
 }
 
 /*ingredient input css*/
@@ -172,7 +180,7 @@ textarea {
 #instructions {
     width: 500px;
     margin-bottom: 60px;
-    height: 100px;
+    height: 200px;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
@@ -379,7 +387,7 @@ form {
     height: 100px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;
+    margin-top: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -387,3 +395,4 @@ form {
     border-style: solid;
     border-width: thin;
 }
+
