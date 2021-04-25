@@ -11,7 +11,7 @@
 
 -->
 
-<div id="title"><h2>My fancy new web site</h2></div>
+<div id="title"><h2>Eat Your feelings</h2><h3>A collection of user submitted recipes</h3></div>
 <div id="intro_no_animation">
   <div class="main_color" id="intro_main_panel">
     <video autoplay muted loop>
@@ -24,5 +24,16 @@
   <div id="server_control">
     <div><p>Current Server:<span id="server_value"></span></p></div>
     <input type="button" value="New Server" onclick="change_server()"/>
+  </div>
+  <div id="source_box">
+    <p>Current Source:<span id="source_display"></span></p>
+    <div>
+      <label for="source">Select Source</label>
+      <select id="source" onchange="change_source()">
+        <option value="server">Select A Source (Default is Remote)</option>
+        <option value="server">Remote Server</option>
+        <option value="localstorage">Local Storage</option>
+      </select>
+    </div>
   </div>
 </div>

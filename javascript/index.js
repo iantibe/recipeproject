@@ -57,3 +57,14 @@ function display_server(){
     document.querySelector('#server_value').innerHTML = server_address;
 
 }
+
+function change_source(){
+    var e = document.querySelector('#source');
+    datasource = e.options[e.selectedIndex].value;
+
+    display_source()
+}
+
+function display_source(){
+    document.querySelector('#source_display').innerHTML = datasource
+}

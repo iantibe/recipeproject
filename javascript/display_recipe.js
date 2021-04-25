@@ -97,17 +97,21 @@ function get_data_from_server(){
     //recipe_obj.recipe_id = 100
     //recipe_obj.image_file = "salmon.jpg"
     //return [recipe_obj]
-    console.log("server_Data")
-    console.log(server_address)
-    console.log("formatted data")
-    get_server_data = server_address + "/recipes"
 
-    console.log(get_server_data)
+    if(datasource === "server") {
+        console.log("server_Data")
+        console.log(server_address)
+        console.log("formatted data")
+        get_server_data = server_address + "/recipes"
 
-    fetch(get_server_data)
-        .then(x => x.json())
-        .then(y =>  server_data = y);
+        console.log(get_server_data)
 
+        fetch(get_server_data)
+            .then(x => x.json())
+            .then(y => server_data = y);
+    } else {
+        server_data = get_recipe_from_local_storage()
+    }
 }
 
 
@@ -149,7 +153,7 @@ function change_servings(multipler){
 
     for (let x = 0; x < recipe.ingredient_list.length; x++) {
         let i = recipe.ingredient_list[x].ingredient
-        let a_original = parseInt(recipe.ingredient_list[x].amount)
+        let a_original = parseFloat(recipe.ingredient_list[x].amount)
         let a = multipler * a_original
         let u = recipe.ingredient_list[x].units
 
@@ -179,4 +183,9 @@ function change_servings(multipler){
         document.querySelector('#display_info2').appendChild(div_object_ing);
     }
 
+}
+
+function get_recipe_from_local_storage(){
+    let json_object = localStorage.getItem(localstorage_var_name)
+    return JSON.parse(json_object)
 }

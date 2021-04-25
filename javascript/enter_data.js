@@ -50,7 +50,7 @@ function submit_recipe(){
 
         //create object
         recipe_object = new Recipe(recipe_name,servings,prep_time,cook_time,difficulty,directions,ingredient_list)
-        recipe_object.image_file = document.querySelector('#file_input').value
+        recipe_object.image_file = image_file
 
         //clear boxes
         document.querySelector('#error_box').style.display = "none"
@@ -65,7 +65,12 @@ function submit_recipe(){
         document.querySelector('#input_directions').value = ""
         ingredient_list = []
         console.log(recipe_object)
-        post_recipe_to_server(recipe_object)
+        if(datasource === "server") {
+            post_recipe_to_server(recipe_object)
+        } else {
+            save_recipe_to_localstorage(recipe_object)
+            console.log(get_recipe_from_local_storage())
+        }
     }else {
         document.querySelector('#error_message').innerHTML = response_verify
         document.querySelector('#error_box').style.display = "flex"
@@ -114,3 +119,21 @@ function verify_data(){
     return status
 
 }
+
+function save_recipe_to_localstorage(rec_object){
+        if(localStorage.getItem(localstorage_var_name) === null){
+            console.log("in empty")
+            let item_to_store = []
+            item_to_store.push(rec_object)
+           let json_to_store = JSON.stringify(item_to_store)
+            localStorage.setItem(localstorage_var_name, json_to_store)
+        } else {
+            console.log("in not empty")
+            let json_retrieved = localStorage.getItem(localstorage_var_name)
+            let java_object = JSON.parse(json_retrieved)
+            java_object.push(rec_object)
+            localStorage.setItem(localstorage_var_name, JSON.stringify(java_object))
+
+        }
+}
+
