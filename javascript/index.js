@@ -105,3 +105,7 @@ function set_up_display_recipe(){
     setTimeout(function(){ generate_recipe_buttons(); }, 1500);
 
 }
+
+function set_up_remote_status(){
+    setTimeout(function(){display_source(); display_server();},1000)
+}

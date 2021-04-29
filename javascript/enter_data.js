@@ -18,7 +18,7 @@ function add_item(){
 
     document.querySelector('#ingredient').value = ""
     document.querySelector('#amount').value = ""
-    //todo: Add drop down reset
+
 }
 
 function clear_form(){
@@ -32,7 +32,7 @@ function clear_form(){
     document.querySelector('#cook_time').value =""
     document.querySelector('#input_directions').value = ""
     ingredient_list = []
-    //TODO: add command to reset drop down
+
     }
 
 function submit_recipe(){
@@ -98,7 +98,7 @@ async function post_recipe_to_server(post_data) {
 
 function verify_data(){
 
-    status =  "-1"
+    var status =  "-1"
 
     if (document.querySelector('#recipe_name').value === ""){
         status = "Please add A recipe name"
@@ -114,6 +114,12 @@ function verify_data(){
         status = "Please add ingredients"
     }else if(document.querySelector('#input_directions').value === ""){
         status = "Please Add Directions"
+    }else if(isNaN(document.querySelector('#servings').value) === true){
+        status = "A number is required for a Serving"
+    }else if(isNaN(document.querySelector('#prep_time').value) === true){
+        status = "A number is required for a Prep-time"
+    }else if (isNaN(document.querySelector('#cook_time').value) === true){
+        status = "A number is required for a Cook Time"
     }
 
     return status

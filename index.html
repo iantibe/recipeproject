@@ -22,7 +22,7 @@
         <div id="topheader">
             <div id="leftheader" class="main_color">
                 <ul>
-                    <li onclick="get_menu_option('intro_content.html')">Home</li>
+                    <li onclick="get_menu_option('intro_content.html'); set_up_remote_status()">Home</li>
                     <li class="menuitemmargin"onclick="get_menu_option('enter_data.html')">Add Recipe</li>
                     <li class="menuitemmargin" onclick="get_menu_option('display_recipe.html'); set_up_display_recipe();">Show Recipies</li>
                 </ul>
@@ -59,7 +59,7 @@
                 <div>
                     <label for="source">Select Source</label>
                     <select id="source" onchange="change_source()">
-                        <option value="server">Select A Source (Default is Server)</option>
+                        <option value="localstorage">Select A Source (Default is localstorage)</option>
                         <option value="server">Remote Server</option>
                         <option value="localstorage">Local Storage</option>
                     </select>
