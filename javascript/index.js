@@ -96,6 +96,12 @@ function change_to_ethereal(){
 }
 
 function change_to_python_anywhere(){
-    server_address = "https://cors-anywhere.herokuapp.com/http://itibe.pythonanywhere.com"
+    server_address = "http://itibe.pythonanywhere.com"
     display_server()
+}
+
+function set_up_display_recipe(){
+    get_data_from_server()
+    setTimeout(function(){ generate_recipe_buttons(); }, 1500);
+
 }
