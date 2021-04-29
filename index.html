@@ -17,7 +17,7 @@
     <meta name="author" content="Ian Tibe">
     <meta name="keywords" content="recipes, user submitted, school project">
 </head>
-<body onload="setup_name_user_id(); display_server(); display_source()">
+<body onload="setup_name_user_id(); display_server(); display_source(); load_initial_json()">
     <header>
         <div id="topheader">
             <div id="leftheader" class="main_color">
@@ -49,6 +49,10 @@
             <div id="server_control">
                 <div><p>Current Server:<span id="server_value"></span></p></div>
                 <input type="button" value="New Server" onclick="change_server()"/>
+                <div id="server_selection">
+                    <input type="button" value="etherealmind.ddns.net" onclick="change_to_ethereal()">
+                    <input type="button" value="Python Anywhere" onclick="change_to_python_anywhere()">
+                </div>
             </div>
              <div id="source_box">
                  <p>Current Source:<span id="source_display"></span></p>

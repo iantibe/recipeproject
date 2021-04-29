@@ -68,3 +68,34 @@ function change_source(){
 function display_source(){
     document.querySelector('#source_display').innerHTML = datasource
 }
+
+function load_initial_json(){
+
+   if(localStorage.getItem(localstorage_var_name) === null) {
+       console.log("load initial data")
+       fetch("json_response.txt")
+           .then(function (response) {
+               return response.json();
+           })
+           .then(function (result) {
+
+               localStorage.setItem(localstorage_var_name, JSON.stringify(result))
+           });
+
+       console.log(localStorage.getItem(localstorage_var_name))
+       console.log(JSON.parse(localStorage.getItem(localstorage_var_name)))
+   }else{
+       console.log("did not load init")
+   }
+
+}
+
+function change_to_ethereal(){
+    server_address = "http://etherealmind.ddns.net:8000"
+    display_server()
+}
+
+function change_to_python_anywhere(){
+    server_address = "https://cors-anywhere.herokuapp.com/http://itibe.pythonanywhere.com"
+    display_server()
+}

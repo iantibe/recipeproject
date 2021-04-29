@@ -387,7 +387,7 @@ form {
 
 #server_control {
     width: 400px;
-    height: 100px;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 300px;
@@ -397,10 +397,11 @@ form {
     justify-content: center;
     border-style: solid;
     border-width: thin;
+    padding: 10px;
 }
 
 #source_box {
-    width: 400px;
+    width: 420px;
     height: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -411,4 +412,14 @@ form {
     justify-content: center;
     border-style: solid;
     border-width: thin;
+    margin-bottom: 10px;
+}
+
+#server_selection {
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

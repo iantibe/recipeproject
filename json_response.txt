@@ -1,0 +1,235 @@
+[
+  {
+    "cookingtime": 360.0, 
+    "difficulty": "medium", 
+    "directions": " Heat cooking oil in 2 quart skillet.\nSaute onions and peppers for 5 minutes.\nAdd spices and stir for 30 seconds.\nAdd meat and cook until browned. Approximately 15 minutes.\nPour contents of skillet into 3 quart crock pot.\nRinse beans and place in crockpot.\nOpen and pour Tomato puree and sauce into crock pot.\nCover crockpot and cook on low for 6 hours.\nServe into individual bowls and top with sour cream and cheese. ", 
+    "image_file": "chilli.jpg", 
+    "ingredient_list": [
+      {
+        "amount": 2.0, 
+        "ingredient": "Cooking Oil", 
+        "units": "Tablespoon"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Onion", 
+        "units": "Cups"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Chopped Peppers", 
+        "units": "Cups"
+      }, 
+      {
+        "amount": 4.0, 
+        "ingredient": "Chili Powder", 
+        "units": "Tablespoon"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Hot Chili Powder (optional)", 
+        "units": "Teaspoon"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Ground Beef or Chicken", 
+        "units": "Pounds"
+      }, 
+      {
+        "amount": 2.0, 
+        "ingredient": "Red Beans", 
+        "units": "Cans"
+      }, 
+      {
+        "amount": 2.0, 
+        "ingredient": "Kidney Beans", 
+        "units": "Cans"
+      }, 
+      {
+        "amount": 2.0, 
+        "ingredient": "Tomato Puree", 
+        "units": "Cans"
+      }, 
+      {
+        "amount": 2.0, 
+        "ingredient": "Tomato Sauce", 
+        "units": "Cans"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Shredded Cheese (optional)", 
+        "units": "Cups"
+      }, 
+      {
+        "amount": 0.5, 
+        "ingredient": "Sour Cream (optional)", 
+        "units": "Cups"
+      }
+    ], 
+    "name": "Crock Pot Chilli", 
+    "preptime": 25.0, 
+    "recipe_id": 2, 
+    "servings": 6
+  }, 
+  {
+    "cookingtime": 30.0, 
+    "difficulty": "easy", 
+    "directions": "Make a pan out of aluminum foil by doubling up layers of foil large enough to hold your fillet. Place the foil onto a cookie sheet. Lay the fillet onto the foil with the skin side down. In a small bowl, stir together the oil, soy sauce, Worcestershire sauce, lemon juice, ginger, honey, basil and shallots. Pour over the salmon and let it marinate while you preheat the grill, about 20 minutes.\nPreheat a grill for medium-low heat. Slide the foil with the salmon off of the cookie sheet and onto the grill. Cover with the lid and grill the fillet for 10 minutes per inch of thickness, about 20 minutes. Salmon should be able to flake with a fork, but not be too dry. When you serve the salmon, the skin will stick to the foil and your grill will remain clean. Simply slice and use a spatula to scoop the fillet off of the skin to serve.", 
+    "image_file": "salmon.jpg", 
+    "ingredient_list": [
+      {
+        "amount": 1.0, 
+        "ingredient": "Vegetable Oil", 
+        "units": "Tablespoon"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Soy Sauce", 
+        "units": "Tablespoon"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Worcestershire sauce ", 
+        "units": "Teaspoon"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Lemon, Juiced", 
+        "units": "Item"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Grated Fresh Ginger", 
+        "units": "Teaspoon"
+      }, 
+      {
+        "amount": 2.0, 
+        "ingredient": "Honey", 
+        "units": "Tablespoon"
+      }, 
+      {
+        "amount": 0.3, 
+        "ingredient": "chopped fresh basil leaves ", 
+        "units": "Cups"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": " Finely Chopped Shallots ", 
+        "units": "Tablespoon"
+      }, 
+      {
+        "amount": 3.0, 
+        "ingredient": "Salmon, with skin", 
+        "units": "Pounds"
+      }
+    ], 
+    "name": "Grilled Salmon", 
+    "preptime": 15.0, 
+    "recipe_id": 3, 
+    "servings": 6
+  }, 
+  {
+    "cookingtime": 12.0, 
+    "difficulty": "easy", 
+    "directions": "In a medium bowl, whisk together egg, mayonnaise, lemon juice, red pepper flakes, tarragon, and scallions. Gently stir in crabmeat, being careful not to break up meat. Gradually mix in cracker crumbs, adding until desired consistency is achieved. Heat butter in a skillet over medium heat. Form crab mixture into 4 patties. Place patties in skillet, and cook until golden brown, about 5 to 6 minutes on each side.", 
+    "image_file": "crab_cake.jpg", 
+    "ingredient_list": [
+      {
+        "amount": 1.0, 
+        "ingredient": "Egg", 
+        "units": "Item"
+      }, 
+      {
+        "amount": 3.0, 
+        "ingredient": "Mayo", 
+        "units": "Tablespoon"
+      }, 
+      {
+        "amount": 4.0, 
+        "ingredient": "Lemon Juice", 
+        "units": "Teaspoon"
+      }, 
+      {
+        "amount": 0.25, 
+        "ingredient": "Red Pepper Flakes", 
+        "units": "Teaspoon"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Dried Tarragon", 
+        "units": "Teaspoon"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Minced Green Onions ", 
+        "units": "Tablespoon"
+      }, 
+      {
+        "amount": 0.5, 
+        "ingredient": "Crab Meat", 
+        "units": "Pounds"
+      }, 
+      {
+        "amount": 0.5, 
+        "ingredient": "Crushed Buttery Round Crackers", 
+        "units": "Cups"
+      }, 
+      {
+        "amount": 1.0, 
+        "ingredient": "Butter", 
+        "units": "Tablespoon"
+      }
+    ], 
+    "name": "Best Ever Crab Cakes", 
+    "preptime": 15.0, 
+    "recipe_id": 4, 
+    "servings": 4
+  }, 
+  {
+    "cookingtime": 20.0, 
+    "difficulty": "easy", 
+    "directions": "Bring a large pot of lightly salted water to a boil. Cook elbow macaroni in the boiling water, stirring occasionally until cooked through but firm to the bite, 8 minutes. Drain. Melt butter in a saucepan over medium heat; stir in flour, salt, and pepper until smooth, about 5 minutes. Slowly pour milk into butter-flour mixture while continuously stirring until mixture is smooth and bubbling, about 5 minutes. Add Cheddar cheese to milk mixture and stir until cheese is melted, 2 to 4 minutes. Fold macaroni into cheese sauce until coated.", 
+    "image_file": "standard_pic.jpg", 
+    "ingredient_list": [
+      {
+        "amount": 0.5, 
+        "ingredient": "Elbow Macaroni", 
+        "units": "Pounds"
+      }, 
+      {
+        "amount": 0.25, 
+        "ingredient": "Butter", 
+        "units": "Cups"
+      }, 
+      {
+        "amount": 0.25, 
+        "ingredient": "Flour", 
+        "units": "Cups"
+      }, 
+      {
+        "amount": 0.5, 
+        "ingredient": "Salt", 
+        "units": "Teaspoon"
+      }, 
+      {
+        "amount": 0.5, 
+        "ingredient": "Ground Pepper", 
+        "units": "Teaspoon"
+      }, 
+      {
+        "amount": 2.0, 
+        "ingredient": "Milk", 
+        "units": "Cups"
+      }, 
+      {
+        "amount": 2.0, 
+        "ingredient": "Shredded Cheese", 
+        "units": "Cups"
+      }
+    ], 
+    "name": "Mac and Cheese", 
+    "preptime": 10.0, 
+    "recipe_id": 5, 
+    "servings": 4
+  }
+]
