@@ -1,4 +1,5 @@
-/*body css*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap'); /*body*/
 body {
     background-color: black;
     animation-name: bodycolor;
@@ -8,7 +9,7 @@ body {
     animation-fill-mode: forwards;
 }
 
-/*header css*/
+/*header*/
 
 header {
     height: 300px;
@@ -30,7 +31,7 @@ header {
 }
 
 #infoline {
-    height: 50px;
+
 }
 
 #leftheader {
@@ -44,6 +45,8 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+    background-color: whitesmoke;
+    font-family: "JetBrains Mono";
 }
 
 #rightheader {
@@ -62,23 +65,25 @@ header {
     margin-top: 5px;
 }
 
-/*info line css*/
+/*info line*/
 
 #infoline {
     display: flex;
     justify-content: end;
     align-items: center;
+    font-family: "JetBrains Mono";
+    height: 50px;
 
 }
 
-/*content css*/
+/*content*/
  #content {
      width: 95%;
      margin-left: auto;
      margin-right: auto;
  }
 
-/*intro css*/
+/*intro*/
 
 #intro {
     width: 50%;
@@ -97,7 +102,7 @@ header {
     margin-top: 60px;
 }
 
-/*intro css without animation*/
+/*intro without animation*/
 
 #intro_no_animation {
     width: 50%;
@@ -116,6 +121,8 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: 'title_font';
+    font-size: x-large;
 }
 
 video {
@@ -131,7 +138,7 @@ video {
     align-items: center;
 }
 
-/*Animation css*/
+/*Animation */
 
 @keyframes introblock {
     from {transform: translate(1500px, 0px);}
@@ -148,7 +155,7 @@ video {
     to {background-color: #EDE595;}
 }
 
-/*ingredient input css*/
+/*ingredient input */
 
 #dataentry {
     width: 875px;
@@ -283,7 +290,6 @@ form {
     align-items: center;
 }
 
-
 .displayheader {
     padding: 5px;
     text-align: center;
@@ -304,8 +310,6 @@ form {
     min-height: 400px;
 }
 
-
-
 #display_header_2 {
     width: 15%;
     background-image: url("../images/arrows_collapse_icon_160440.png");
@@ -313,8 +317,6 @@ form {
     background-size: contain;
     background-position: right;
 }
-
-
 
 #display_header_3 {
     width: 15%;
@@ -423,3 +425,70 @@ form {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+/*Fonts */
+
+@font-face {
+    font-family: title_font;
+    src: url('../fonts/BioRhymeExpanded-ExtraBold.otf');
+
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../fonts/JetBrainsMono-Regular.ttf");
+}
+
+#leftheader {
+
+}
+
+#title {
+
+}
+
+#infoline {
+
+}
+
+.recipe_select p {
+    font-size: x-large;
+}
+
+.main_color{
+    background-color: #3D4E17;
+}
+
+.second_color {
+    background-color: #C7A003;
+}
+
+.third_color {
+    background-color: #151F13;
+}
+
+.background_final {
+    background-color: #EDE595;
+}
+
+.light_main {
+    background-color: #5C7623;
+
+}
+
+#introtext {
+    font-size: xxx-large;
+    /*Red Hat text font*/
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+#introtext p {
+    text-align: left;
+    padding: 10px;
+}
+
+.main_font{
+    font-family: 'Open Sans', sans-serif;
+}
+
+

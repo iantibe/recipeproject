@@ -15,10 +15,8 @@ function add_item(){
     var text = document.createTextNode(ing.ingredient + ".................." + ing.amount + " " + ing.units);
     p_element.appendChild(text)
     document.querySelector("#ingredent_list").appendChild(p_element)
-
     document.querySelector('#ingredient').value = ""
     document.querySelector('#amount').value = ""
-
 }
 
 function clear_form(){
@@ -32,7 +30,6 @@ function clear_form(){
     document.querySelector('#cook_time').value =""
     document.querySelector('#input_directions').value = ""
     ingredient_list = []
-
     }
 
 function submit_recipe(){
@@ -91,13 +88,9 @@ async function post_recipe_to_server(post_data) {
         body: JSON.stringify(post_data)
     });
 
-    //let result = await response.json();
-    //return result.message
 }
 
-
 function verify_data(){
-
     var status =  "-1"
 
     if (document.querySelector('#recipe_name').value === ""){
@@ -121,25 +114,20 @@ function verify_data(){
     }else if (isNaN(document.querySelector('#cook_time').value) === true){
         status = "A number is required for a Cook Time"
     }
-
     return status
-
 }
 
 function save_recipe_to_localstorage(rec_object){
         if(localStorage.getItem(localstorage_var_name) === null){
-            console.log("in empty")
             let item_to_store = []
             item_to_store.push(rec_object)
            let json_to_store = JSON.stringify(item_to_store)
             localStorage.setItem(localstorage_var_name, json_to_store)
         } else {
-            console.log("in not empty")
             let json_retrieved = localStorage.getItem(localstorage_var_name)
             let java_object = JSON.parse(json_retrieved)
             java_object.push(rec_object)
             localStorage.setItem(localstorage_var_name, JSON.stringify(java_object))
-
         }
 }
 

@@ -21,6 +21,7 @@ function getCookie(cname) {
     }
     return "";
 }
+
 function CreateUUID() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
         var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
@@ -55,13 +56,11 @@ function change_server(){
 
 function display_server(){
     document.querySelector('#server_value').innerHTML = server_address;
-
 }
 
 function change_source(){
     var e = document.querySelector('#source');
     datasource = e.options[e.selectedIndex].value;
-
     display_source()
 }
 
@@ -70,15 +69,12 @@ function display_source(){
 }
 
 function load_initial_json(){
-
    if(localStorage.getItem(localstorage_var_name) === null) {
-       console.log("load initial data")
        fetch("json_response.txt")
            .then(function (response) {
                return response.json();
            })
            .then(function (result) {
-
                localStorage.setItem(localstorage_var_name, JSON.stringify(result))
            });
 
@@ -109,3 +105,15 @@ function set_up_display_recipe(){
 function set_up_remote_status(){
     setTimeout(function(){display_source(); display_server();},1000)
 }
+
+function get_menu_option(data) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.querySelector('#content').innerHTML = this.responseText
+        }
+    };
+    xhttp.open("GET", data, true);
+    xhttp.send();
+}
+
