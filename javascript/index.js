@@ -1,5 +1,3 @@
-//check for user name and id, then set
-
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -32,18 +30,15 @@ function CreateUUID() {
 function setup_name_user_id(){
     name = getCookie("userid")
     if( name === ""){
-
         setTimeout(function() {
             newname = prompt("Enter name")
             newguid = CreateUUID()
             setCookie("userid",newname,365)
             setCookie("userguid",newguid, 365)
             document.querySelector('#username').innerHTML = newname
-
         }, 5000);
     }else {
         document.querySelector('#username').innerHTML = name
-
     }
 }
 
@@ -51,7 +46,6 @@ function change_server(){
     new_server = prompt("Enter new Server Name or IP Number")
     server_address = new_server
     display_server()
-
 }
 
 function display_server(){
@@ -83,7 +77,6 @@ function load_initial_json(){
    }else{
        console.log("did not load init")
    }
-
 }
 
 function change_to_ethereal(){

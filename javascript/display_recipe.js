@@ -1,5 +1,7 @@
-
+//data to display
 var server_data = null
+
+//currently selected recipe
 var selected_recipe = 0
 
 function open_slider(target_div) {
@@ -143,7 +145,6 @@ function change_servings(multipler){
 
         document.querySelector('#display_info2').appendChild(div_object_ing);
     }
-
 }
 
 function get_recipe_from_local_storage(){

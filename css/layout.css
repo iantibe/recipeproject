@@ -73,7 +73,6 @@ header {
     align-items: center;
     font-family: "JetBrains Mono";
     height: 50px;
-
 }
 
 /*content*/
@@ -198,7 +197,6 @@ textarea {
     border-width: thin;
     padding: 10px;
     font-size: large;
-
 }
 
 form input {
@@ -272,7 +270,6 @@ form {
 
 #display_ingredient {
     display: flex;
-
 }
 
 #left_display_panel {
@@ -439,18 +436,6 @@ form {
     src: url("../fonts/JetBrainsMono-Regular.ttf");
 }
 
-#leftheader {
-
-}
-
-#title {
-
-}
-
-#infoline {
-
-}
-
 .recipe_select p {
     font-size: x-large;
 }
@@ -473,7 +458,6 @@ form {
 
 .light_main {
     background-color: #5C7623;
-
 }
 
 #introtext {

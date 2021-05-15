@@ -1,4 +1,3 @@
-
 var ingredient_list = []
 
 function add_item(){
@@ -7,7 +6,7 @@ function add_item(){
     let dropdown_m = document.querySelector('#units');
     let units = dropdown_m.options[dropdown_m.selectedIndex].text
 
-    ing = new Ingredient(ingredient, amount, units)
+    let ing = new Ingredient(ingredient, amount, units)
     ingredient_list.push(ing)
 
     let p_element = document.createElement("p");
@@ -35,7 +34,15 @@ function clear_form(){
 function submit_recipe(){
     response_verify = verify_data()
 
-    if(response_verify === "-1") {
+    let recipe_name;
+    let servings;
+    let prep_time;
+    let cook_time;
+    let difficulty_object;
+    let directions;
+    let difficulty;
+    let recipe_object;
+    if (response_verify === "-1") {
         //get values
         recipe_name = document.querySelector('#recipe_name').value
         servings = document.querySelector('#servings').value
@@ -46,7 +53,7 @@ function submit_recipe(){
         directions = document.querySelector('#input_directions').value
 
         //create object
-        recipe_object = new Recipe(recipe_name,servings,prep_time,cook_time,difficulty,directions,ingredient_list)
+        recipe_object = new Recipe(recipe_name, servings, prep_time, cook_time, difficulty, directions, ingredient_list)
         recipe_object.image_file = image_file
 
         //clear boxes
@@ -54,32 +61,27 @@ function submit_recipe(){
         document.querySelector('#recipe_name').value = ""
         document.querySelector('#servings').value = ""
         document.querySelector('#prep_time').value = ""
-        document.querySelector('#cook_time').value =""
+        document.querySelector('#cook_time').value = ""
         document.querySelector('#input_directions').value = ""
         document.querySelector("#ingredent_list").innerHTML = ""
         document.querySelector('#ingredient').value = ""
         document.querySelector('#amount').value = ""
         document.querySelector('#input_directions').value = ""
         ingredient_list = []
-        console.log(recipe_object)
-        if(datasource === "server") {
+
+        if (datasource === "server") {
             post_recipe_to_server(recipe_object)
         } else {
             save_recipe_to_localstorage(recipe_object)
-            console.log(get_recipe_from_local_storage())
         }
-    }else {
+    } else {
         document.querySelector('#error_message').innerHTML = response_verify
         document.querySelector('#error_box').style.display = "flex"
     }
 }
 
 async function post_recipe_to_server(post_data) {
-    console.log("server address")
-    console.log(server_address)
     send_address = server_address + "/addrecipe"
-    console.log("send address")
-    console.log(send_address)
     let response = await fetch(send_address, {
         method: 'POST',
         headers: {
@@ -87,7 +89,6 @@ async function post_recipe_to_server(post_data) {
         },
         body: JSON.stringify(post_data)
     });
-
 }
 
 function verify_data(){
